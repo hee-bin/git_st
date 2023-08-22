@@ -65,3 +65,18 @@ function updateDisplay() {
 startButton.addEventListener("click", startStopwatch);
 stopButton.addEventListener("click", stopStopwatch);
 resetButton.addEventListener("click", resetStopwatch);
+
+
+
+const newQuestionInput = document.getElementById("newQuestionInput");
+const addQuestionButton = document.getElementById("addQuestionButton");
+
+addQuestionButton.addEventListener("click", addQuestion);
+
+function addQuestion() {
+  const newQuestion = newQuestionInput.value.trim();
+  if (newQuestion !== "") {
+    questions.push(newQuestion);
+    newQuestionInput.value = "";
+  }
+}
