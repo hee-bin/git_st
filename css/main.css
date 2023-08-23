@@ -1,72 +1,123 @@
+/* main.css */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f3f6;
-  }
-*{
-    margin: auto;
+  width: 80%;
+  height: 50%;
+  font-family: Arial, sans-serif;
+  margin: 5%;
+  padding: 0;
+  background-color: #f2f2f2;
 }
-  .question-card {
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+
+#main {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 5%;
+}
+
+header {
+  color: #95d5b2;
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 3px solid #95d5b2;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: #95d5b2;
+  text-decoration: none;
+}
+
+.question-card {
+  background-color: #d1f0e5;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stopwatch {
+  width: 40%;
+  margin: 3%; /* 가로축 가운데 정렬 */
+  border-radius: 10px;
+  background-color: #d1f0e5;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stopwatch .btn {
+  width: 30%;
+  padding: 2%;
+}
+
+.add-question {
+  width: 80%; /* 수정: 질문 추가 칸을 더 길게 */
+  display: flex;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 10%;
+}
+
+.add-question input[type="text"] {
+  width: 100%; /* 수정: 입력 필드를 가로폭 100%로 */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 3%;
+}
+
+#display {
+  font-size: larger;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: #95d5b2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #73b394;
+}
+
+footer {
+  height: 10%;
+  background-color: #95d5b2;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* 반응형 스타일링 */
+@media screen and (max-width: 768px) {
+  .add-question {
+    width: 90%; /* 작은 화면에서는 더 넓게 */
   }
-  
-  .question {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  button:hover {
-    background-color: #2980b9;
-  }
-  
 
   .stopwatch {
-    text-align: center;
-    margin-top: 20px;
+    width: 70%; /* 작은 화면에서는 더 넓게 */
   }
-  
-  #display {
-    font-size: 36px;
-  }
-  
-  #startButton, #stopButton, #resetButton {
-    font-size: 18px;
-    margin: 10px;
-  }
-
-
-  .add-question {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  #newQuestionInput {
-    padding: 5px;
-    width: 300px;
-    font-size: 16px;
-  }
-  
-  #addQuestionButton {
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+}
