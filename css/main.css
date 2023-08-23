@@ -1,16 +1,22 @@
 /* main.css */
 body {
-  height: 80%;
   width: 80%;
+  height: 50%;
   font-family: Arial, sans-serif;
   margin: 5%;
   padding: 0;
   background-color: #f2f2f2;
 }
 
+
 #main {
+  height: 70%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 5%;
 }
 
 header {
@@ -18,6 +24,7 @@ header {
   text-align: center;
   padding: 1rem 0;
   border-bottom: 3px solid #95d5b2;
+  width: 100%;
 }
 
 nav ul {
@@ -46,30 +53,37 @@ nav ul li a {
 }
 
 .stopwatch {
-  background-color: #f2f2f2;
+  width: 40%;
+  margin: 3%; /* 가로축 가운데 정렬 */
   border-radius: 10px;
+  background-color: #d1f0e5;
   text-align: center;
-  margin-top: 1rem;
   padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stopwatch .btn {
+  width: 30%;
+  padding: 2%;
 }
 
 .add-question {
-  display: inline-block;
-  border-radius: 10px;
+  width: 80%; /* 수정: 질문 추가 칸을 더 길게 */
+  display: flex;
   text-align: center;
-  margin-top: 1rem;
   padding: 1rem;
   margin-bottom: 10%;
 }
 
 .add-question input[type="text"] {
-  width: 60%;
+  width: 100%; /* 수정: 입력 필드를 가로폭 100%로 */
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-right: 3%;
 }
 
-#display{
+#display {
   font-size: larger;
 }
 
@@ -83,16 +97,27 @@ nav ul li a {
   transition: background-color 0.3s ease;
 }
 
-.btn button:hover {
+.btn:hover {
   background-color: #73b394;
 }
 
 footer {
+  height: 10%;
   background-color: #95d5b2;
   color: white;
   text-align: center;
   padding: 1rem 0;
-  position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+/* 반응형 스타일링 */
+@media screen and (max-width: 768px) {
+  .add-question {
+    width: 90%; /* 작은 화면에서는 더 넓게 */
+  }
+
+  .stopwatch {
+    width: 70%; /* 작은 화면에서는 더 넓게 */
+  }
 }

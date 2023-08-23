@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
   const questionElement = document.getElementById('question');
-  const nextButton = document.getElementById('nextButton');
+  const nextButton = document.querySelector('.question-card .btn');
   const display = document.getElementById('display');
   const startButton = document.getElementById('startButton');
   const stopButton = document.getElementById('stopButton');
   const resetButton = document.getElementById('resetButton');
   const newQuestionInput = document.getElementById('newQuestionInput');
-  const addQuestionButton = document.getElementById('addQuestionButton');
+  const addQuestionButton = document.querySelector('.add-question .btn');
   
   const questions = [
     'What is your favorite book?',
@@ -16,12 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
 
   let currentQuestionIndex = 0;
-
-  nextButton.addEventListener('click', function () {
-    currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
-    questionElement.textContent = questions[currentQuestionIndex];
-  });
-
   let timerInterval;
   let startTime;
   let elapsedTime = 0;
@@ -58,15 +52,26 @@ document.addEventListener('DOMContentLoaded', function () {
     updateDisplay();
   }
 
-  startButton.addEventListener('click', startTimer);
-  stopButton.addEventListener('click', stopTimer);
-  resetButton.addEventListener('click', resetTimer);
-
-  addQuestionButton.addEventListener('click', function () {
-    const newQuestion = newQuestionInput.value;
+  function addQuestion() {
+    const newQuestion = newQuestionInput.value.trim();
     if (newQuestion) {
       questions.push(newQuestion);
       newQuestionInput.value = '';
     }
+  }
+
+  function getRandomQuestion() {
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    return questions[randomIndex];
+  }
+
+  nextButton.addEventListener('click', function () {
+    const randomQuestion = getRandomQuestion();
+    questionElement.textContent = randomQuestion;
   });
+
+  startButton.addEventListener('click', startTimer);
+  stopButton.addEventListener('click', stopTimer);
+  resetButton.addEventListener('click', resetTimer);
+  addQuestionButton.addEventListener('click', addQuestion);
 });
