@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+
   <title>Random English Questions</title>
 </head>
 <body>
@@ -19,21 +21,24 @@
     </nav>
   </header>
 
-  <div class="question-card">
-    <div class="question" id="question">Loading question...</div>
-    <button id="nextButton">Next Question</button>
-  </div>
+  <div id="main">
 
-  <div class="stopwatch">
-    <div id="display">00:00:00</div>
-    <button id="startButton">Start</button>
-    <button id="stopButton">Stop</button>
-    <button id="resetButton">Reset</button>
-  </div>
+    <div class="question-card">
+      <div class="question" id="question">Loading question...</div>
+      <button id="nextButton">Next Question</button>
+    </div>
 
-  <div class="add-question">
-    <input type="text" id="newQuestionInput" placeholder="Enter a new question">
-    <button id="addQuestionButton">Add Question</button>
+    <div class="stopwatch">
+      <div id="display">00:00:00</div>
+      <button id="startButton">Start</button>
+      <button id="stopButton">Stop</button>
+      <button id="resetButton">Reset</button>
+    </div>
+
+    <div class="add-question">
+      <input type="text" id="newQuestionInput" placeholder="Enter a new question">
+      <button id="addQuestionButton">Add Question</button>
+    </div>
   </div>
 
   <footer>
@@ -41,6 +46,5 @@
     <p>&copy; 2023 Random English Questions. All rights reserved.</p>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>

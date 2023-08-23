@@ -1,15 +1,22 @@
 /* main.css */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin: 5%;
   padding: 0;
+  background-color: #f2f2f2;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
 }
 
 header {
-  background-color: #333;
-  color: white;
+  color: #95d5b2;
   text-align: center;
   padding: 1rem 0;
+  border-bottom: 3px solid #95d5b2;
 }
 
 nav ul {
@@ -23,30 +30,61 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: #95d5b2;
   text-decoration: none;
 }
 
 .question-card {
-  border: 1px solid #ccc;
+  background-color: #d1f0e5;
+  border-radius: 10px;
   padding: 1rem;
   margin: 1rem auto;
   width: 80%;
   text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .stopwatch {
+  background-color: #f2f2f2;
+  border-radius: 10px;
   text-align: center;
   margin-top: 1rem;
+  padding: 1rem;
 }
 
 .add-question {
+  display: inline-block;
+  background-color: #d1f0e5;
+  border-radius: 10px;
   text-align: center;
   margin-top: 1rem;
+  padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-question input[type="text"] {
+  width: 60%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-question button {
+  padding: 0.5rem 1rem;
+  background-color: #95d5b2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-question button:hover {
+  background-color: #73b394;
 }
 
 footer {
-  background-color: #333;
+  background-color: #95d5b2;
   color: white;
   text-align: center;
   padding: 1rem 0;
