@@ -1,72 +1,56 @@
+/* main.css */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f3f6;
-  }
-*{
-    margin: auto;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-  .question-card {
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .question {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  button:hover {
-    background-color: #2980b9;
-  }
-  
 
-  .stopwatch {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  #display {
-    font-size: 36px;
-  }
-  
-  #startButton, #stopButton, #resetButton {
-    font-size: 18px;
-    margin: 10px;
-  }
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
 
+nav ul {
+  list-style: none;
+  padding: 0;
+}
 
-  .add-question {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  #newQuestionInput {
-    padding: 5px;
-    width: 300px;
-    font-size: 16px;
-  }
-  
-  #addQuestionButton {
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.question-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+  text-align: center;
+}
+
+.stopwatch {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.add-question {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
