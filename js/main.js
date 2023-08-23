@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const startButton = document.getElementById('startButton');
   const stopButton = document.getElementById('stopButton');
   const resetButton = document.getElementById('resetButton');
+  const newQuestionInput = document.getElementById('newQuestionInput');
+  const addQuestionButton = document.getElementById('addQuestionButton');
   
   const questions = [
     'What is your favorite book?',
@@ -28,9 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateDisplay() {
     const seconds = Math.floor(elapsedTime / 1000);
     const minutes = Math.floor(elapsedTime / (1000 * 60)) % 60;
-    const hours = Math.floor(elapsedTime / (1000 * 60 * 60));
 
-    display.textContent = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    display.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   }
 
   function startTimer() {
@@ -60,4 +61,12 @@ document.addEventListener('DOMContentLoaded', function () {
   startButton.addEventListener('click', startTimer);
   stopButton.addEventListener('click', stopTimer);
   resetButton.addEventListener('click', resetTimer);
+
+  addQuestionButton.addEventListener('click', function () {
+    const newQuestion = newQuestionInput.value;
+    if (newQuestion) {
+      questions.push(newQuestion);
+      newQuestionInput.value = '';
+    }
+  });
 });
